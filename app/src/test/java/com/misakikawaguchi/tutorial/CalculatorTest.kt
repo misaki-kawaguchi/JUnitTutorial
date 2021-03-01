@@ -42,7 +42,7 @@ class CalculatorTest {
     }
 
     @Test
-    fun divideで3を2で割ったら結果を取得できる() {
+    fun divideで3を2で割った結果を取得できる() {
         // テスト対象オブジェクト
         val sut = Calculator()
         // 実測値
