@@ -1,14 +1,21 @@
 package com.misakikawaguchi.tutorial
 
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.Before
 import org.junit.Test
 
 class CalculatorTest {
+    lateinit var sut: Calculator
+
+    @Before
+    fun setUp() {
+        // テスト対象オブジェクト
+        sut = Calculator()
+    }
 
     @Test
     fun multiplyで2と3を掛けたら6が取得できる() {
-        // テスト対象オブジェクト
-        val sut = Calculator()
+
         // 実測値
         val actual = sut.multiply(2, 3)
         // 期待値
@@ -19,8 +26,6 @@ class CalculatorTest {
 
     @Test
     fun multiplyで0と3を掛けたら0が取得できる() {
-        // テスト対象オブジェクト
-        val sut = Calculator()
         // 実測値
         val actual = sut.multiply(0, 3)
         // 期待値
@@ -31,8 +36,6 @@ class CalculatorTest {
 
     @Test
     fun divideで6を2で割ったら3を取得できる() {
-        // テスト対象オブジェクト
-        val sut = Calculator()
         // 実測値
         val actual = sut.divide(6, 2)
         // 期待値
@@ -43,8 +46,6 @@ class CalculatorTest {
 
     @Test
     fun divideで3を2で割った結果を取得できる() {
-        // テスト対象オブジェクト
-        val sut = Calculator()
         // 実測値
         val actual = sut.divide(3, 2)
         // 期待値
@@ -55,8 +56,6 @@ class CalculatorTest {
 
     @Test(expected = IllegalArgumentException::class)
     fun divideで3を0で割るとIllegalArgumentExceptionが送出される() {
-        // テスト対象オブジェクト
-        val sut = Calculator()
         // 実測値
         val actual = sut.divide(3, 0)
     }
