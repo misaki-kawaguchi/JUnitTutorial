@@ -40,4 +40,16 @@ class CalculatorTest {
         // アサーション
         assertThat(actual).isEqualTo(expected)
     }
+
+    @Test
+    fun divideで3を2で割ったら結果を取得できる() {
+        // テスト対象オブジェクト
+        val sut = Calculator()
+        // 実測値
+        val actual = sut.divide(3, 2)
+        // 期待値
+        val expected = 1.5
+        // アサーション
+        assertThat(actual).isEqualTo(expected)
+    }
 }
