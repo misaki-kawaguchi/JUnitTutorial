@@ -6,7 +6,7 @@ import org.junit.Test
 class CalculatorTest {
 
     @Test
-    fun multiplyで掛け算の掛け算の結果が取得できる() {
+    fun multiplyで掛け算の結果が取得できる() {
         // テスト対象オブジェクト
         val sut = Calculator()
         // 実測値
