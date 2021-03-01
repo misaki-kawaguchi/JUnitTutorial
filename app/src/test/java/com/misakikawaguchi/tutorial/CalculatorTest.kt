@@ -52,4 +52,12 @@ class CalculatorTest {
         // アサーション
         assertThat(actual).isEqualTo(expected)
     }
+
+    @Test(expected = IllegalArgumentException::class)
+    fun divideで3を0で割るとIllegalArgumentExceptionが送出される() {
+        // テスト対象オブジェクト
+        val sut = Calculator()
+        // 実測値
+        val actual = sut.divide(3, 0)
+    }
 }
