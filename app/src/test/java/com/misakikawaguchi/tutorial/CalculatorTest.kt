@@ -39,7 +39,7 @@ class CalculatorTest {
         // 実測値
         val actual = sut.divide(6, 2)
         // 期待値
-        val expected = 3
+        val expected = 3.0
         // アサーション
         assertThat(actual).isEqualTo(expected)
     }
