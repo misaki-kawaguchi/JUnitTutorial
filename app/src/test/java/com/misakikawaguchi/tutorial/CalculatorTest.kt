@@ -30,6 +30,14 @@ class CalculatorTest {
     }
 
     @Test
-    fun divide() {
+    fun divideで6を2で割ったら3を取得できる() {
+        // テスト対象オブジェクト
+        val sut = Calculator()
+        // 実測値
+        val actual = sut.divide(6, 2)
+        // 期待値
+        val expected = 3
+        // アサーション
+        assertThat(actual).isEqualTo(expected)
     }
 }
