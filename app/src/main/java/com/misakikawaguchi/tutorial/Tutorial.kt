@@ -36,3 +36,17 @@ class CalculatorEnclosed(val n: Int = 1) {
         return n * x * y
     }
 }
+
+class Counter {
+    var count = 0
+
+    fun increment(): Int {
+        count += 1
+        return count
+    }
+
+    fun decrement(): Int {
+        count -= 1
+        return count
+    }
+ }
