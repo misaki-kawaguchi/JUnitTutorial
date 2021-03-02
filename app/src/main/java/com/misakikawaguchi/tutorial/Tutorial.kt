@@ -30,3 +30,9 @@ class Circle(var pi: Double = 3.14) {
         return radius * radius * pi
     }
 }
+
+class CalculatorEnclosed(val n: Int = 1) {
+    fun multiply(x: Int, y: Int): Int {
+        return n * x * y
+    }
+}
