@@ -1,7 +1,9 @@
 package com.misakikawaguchi.tutorial
 
-import org.assertj.core.api.Assertions.*
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
+import org.junit.runner.RunWith
+import org.junit.runners.Suite
 
 class CircleTest {
 
@@ -15,3 +17,7 @@ class CircleTest {
         assertThat(Circle().getArea(0)).isEqualTo(0.0)
     }
 }
+
+@RunWith(Suite::class)
+@Suite.SuiteClasses(FizzBuzzTest::class, CircleTest::class)
+class SuiteTest {} // クラス名は任意
