@@ -25,3 +25,8 @@ class FizzBuzz {
         }
     }
 }
+class Circle(var pi: Double = 3.14) {
+    fun getArea(radius: Int): Double {
+        return radius * radius * pi
+    }
+}
